@@ -7,20 +7,20 @@
           <div class="menu-mobile-header">
               <div class="position-relative">
                   <div id="select-language" class="box-select">
-                      <img id="img-vietnam" class="flag-img-moble" src="../assets/img/vietnam.png" alt="">
-                      <img id="img-english" class="flag-img-moble" src="../assets/img/united-states.png" alt="">
+                      <img class="flag-img-mobile img-vietnam" src="../assets/img/vietnam.png" alt="">
+                      <img class="flag-img-mobile img-english" src="../assets/img/united-states.png" alt="">
                       <i class="tech-icon tech-icon-triangle"></i>
                   </div>
                   <ul id="box-language-mobile" class="box-language box-language-mobile">
                       <li id="flag-vietnam-mobile">
                           <i class="tech-icon tech-icon-check"></i>
                           <img class="flag-img" src="../assets/img/vietnam.png" alt="">
-                          <span>Vietnamese</span>
+                          <span>{{$t('vietnamese')}}</span>
                       </li>
                       <li id="flag-english-mobile" class="active">
                           <i class="tech-icon tech-icon-check"></i>
                           <img class="flag-img" src="../assets/img/united-states.png" alt="">
-                          <span>English</span>
+                          <span>{{$t('english')}}</span>
                       </li>
                   </ul>
               </div>
@@ -29,10 +29,12 @@
               </div>
           </div>
           <ul class="box-menu">
-              <li class="item-menu js-about-us-menu"><a href="#about-us" class="js-about-us-menu">ABOUT US</a></li>
-              <li class="item-menu"><a href="#games">GAMES</a></li>
-              <li class="item-menu"><a href="#partners">PARTNERS</a></li>
-              <li class="item-menu"><a href="#contact-us">CONTACT US</a></li>
+              <li class="item-menu js-about-us-menu"><a href="#about-us" class="js-about-us-menu">
+                  {{ $t("about_us") }}
+              </a></li>
+              <li class="item-menu"><a href="#games">{{ $t("games") }}</a></li>
+              <li class="item-menu"><a href="#partners">{{ $t("partners") }}</a></li>
+              <li class="item-menu"><a href="#contact-us">{{ $t("contact_us") }}</a></li>
           </ul>
       </div>
 
@@ -41,24 +43,24 @@
               <header class="header">
                   <img class="logo-tech" src="../assets/img/white_logo.png" alt="z-tech">
                   <nav class="menu-header show-web">
-                      <a href="#about-us" class="js-about-us-menu">ABOUT US</a>
-                      <a href="#games">GAMES</a>
-                      <a href="#partners">PARTNERS</a>
-                      <a href="#contact-us">CONTACT US</a>
+                      <a href="#about-us" class="js-about-us-menu">{{ $t("about_us") }}</a>
+                      <a href="#games">{{ $t("games") }}</a>
+                      <a href="#partners">{{ $t("partners") }}</a>
+                      <a href="#contact-us">{{ $t("contact_us") }}</a>
                       <a id="flag-language" href="javascript:;" class="change-language">
-                          <img id="img-vietnam" class="flag-img" src="../assets/img/vietnam.png" alt="">
-                          <img id="img-english" class="flag-img" src="../assets/img/united-states.png" alt="">
+                          <img class="flag-img img-vietnam" src="../assets/img/vietnam.png" alt="">
+                          <img class="flag-img img-english" src="../assets/img/united-states.png" alt="">
                           <i class="tech-icon tech-icon-triangle"></i>
                           <ul id="box-language" class="box-language">
                               <li id="flag-vietnam">
                                   <i class="tech-icon tech-icon-check"></i>
                                   <img class="flag-img" src="../assets/img/vietnam.png" alt="">
-                                  <span>Vietnamese</span>
+                                  <span style="width: 55px">{{$t('vietnamese')}}</span>
                               </li>
                               <li id="flag-english" class="active">
                                   <i class="tech-icon tech-icon-check"></i>
                                   <img class="flag-img" src="../assets/img/united-states.png" alt="">
-                                  <span>English</span>
+                                  <span style="width: 55px">{{$t('english')}}</span>
                               </li>
                           </ul>
                       </a>
@@ -69,30 +71,29 @@
               </header>
               <div class="header-content">
                   <div class="box-ready">
-                      <h1 class="title">We’re Getting Ready</h1>
+                      <h1 class="title">{{$t('we_ready')}}</h1>
                       <div class="box-timer" id="timer">
                           <div class="timer-item" id="days">
-                              <span class='timer-number js-days-number'></span><span class="timer-text">Days</span>
+                              <span class='timer-number js-days-number'></span><span class="timer-text">{{$t('days')}}</span>
                           </div>
                           <span class="timer-division">:</span>
                           <div class="timer-item" id="hours">
-                              <span class='timer-number js-hours-number'></span><span class="timer-text">Hours</span>
+                              <span class='timer-number js-hours-number'></span><span class="timer-text">{{$t('hours')}}</span>
                           </div>
                           <span class="timer-division">:</span>
                           <div class="timer-item" id="minutes">
-                              <span class='timer-number js-minutes-number'></span><span class="timer-text">Minutes</span>
+                              <span class='timer-number js-minutes-number'></span><span class="timer-text">{{$t('minutes')}}</span>
                           </div>
                           <span class="timer-division">:</span>
                           <div class="timer-item" id="seconds">
-                              <span class='timer-number js-seconds-number'></span><span class="timer-text">Seconds</span>
+                              <span class='timer-number js-seconds-number'></span><span class="timer-text">{{$t('seconds')}}</span>
                           </div>
                       </div>
                   </div>
                   <div class="box-description">
-                      <p class="mb-3">We will back to something amazing. Getting the latest updates about our games.Please sign up to
-                          our newsletter.</p>
+                      <p class="mb-3">{{$t('we_will_back')}}</p>
                       <div class="input-search">
-                          <input placeholder="Enter your email" type="text">
+                          <input :placeholder="$t('enter_email')" type="text">
                           <i class="tech-icon tech-icon-arrow-right"></i>
                       </div>
                   </div>
@@ -102,22 +103,18 @@
           <section class="wrapper-about">
               <div class="row">
                   <div class="col-md-6">
-                      <h2 class="title-about title-common" id="about-us">About Us</h2>
+                      <h2 class="title-about title-common" id="about-us">{{$t('about_us_title')}}</h2>
                       <p class="description-about">
-                          Browse our selection of free online games and have a great time without leaving the site! Our Kids Games
-                          option also includes game reviews, extensive game cheats and walkthroughs, and much more. We have exclusive
-                          free downloads, videos, and articles as well. Etech reviews the most popular kids games from all the most
-                          popular video gaming platforms, so you don’t need to search around for fun anywhere else on the Internet.
-                          Explore a whole new world of gaming on Etech.
+                          {{$t('about_us_content')}}
                       </p>
                       <div class="mobile-flex">
                           <div>
                               <h3 class="title-user">600<span>M</span>+</h3>
-                              <h5 class="color-black font-weight-bold mb-4">Users</h5>
+                              <h5 class="color-black font-weight-bold mb-4">{{$t('users')}}</h5>
                           </div>
                           <div>
                               <h3 class="title-user">135+</h3>
-                              <h5 class="color-black font-weight-bold">Games</h5>
+                              <h5 class="color-black font-weight-bold">{{$t('games_title')}}</h5>
                           </div>
                       </div>
                   </div>
@@ -128,8 +125,8 @@
               <i class="tech-icon tech-icon-calendar-tick"></i>
             </span>
                               <div class="item-about--content">
-                                  <h5>24 - Hour</h5>
-                                  <p>24/7 access ensures operators' businesses runs smoothly all year long.</p>
+                                  <h5>{{$t('access_time')}}</h5>
+                                  <p>{{$t('access_time_content')}}</p>
                               </div>
                           </div>
                           <div class="item-about">
@@ -137,9 +134,8 @@
               <i class="tech-icon tech-icon-pen-tool-2"></i>
             </span>
                               <div class="item-about--content">
-                                  <h5>Design</h5>
-                                  <p>Combining imaginative universes, play dynamics, and unprecedented gameplay, our games transcend the
-                                      boundaries of the virtual world by weaving innovative gameplay.</p>
+                                  <h5>{{$t('design')}}</h5>
+                                  <p>{{$t('design_content')}}</p>
                               </div>
                           </div>
 
@@ -148,9 +144,8 @@
               <i class="tech-icon tech-icon-people"></i>
             </span>
                               <div class="item-about--content">
-                                  <h5>Team</h5>
-                                  <p>Etech is an award-winning, international studio of designers, artists, animators and producers that
-                                      create content for the biggest names in film and video games. </p>
+                                  <h5>{{$t('team')}}</h5>
+                                  <p>{{$t('team_content')}}</p>
                               </div>
                           </div>
                       </div>
@@ -163,10 +158,8 @@
           </section>
           <section class="wrapper-our-games">
               <div class="our-games-header text-center">
-                  <h2 class="title-common" id="games">Our Games</h2>
-                  <p class="our-games--description">As a pioneer of mobile app gamification, we take pride in originality and
-                      individuality, providing global players with state-of-the-art games that feature splendid storylines,
-                      sensational sound effects and magnificent animation that never cease to impress.</p>
+                  <h2 class="title-common" id="games">{{$t('our_games')}}</h2>
+                  <p class="our-games--description">{{$t('our_games_content')}}</p>
               </div>
               <div class="box-images">
                   <div class="column-image column-old">
@@ -289,7 +282,7 @@
           </section>
 
           <section class="wrapper-our-partners">
-              <h2 class="title-common text-center mb-5" id="partners">Our Partners</h2>
+              <h2 class="title-common text-center mb-5" id="partners">{{$t('our_partner')}}</h2>
               <div class="carousel">
                   <div class="arrow-slick slick-left">
                       <i class="tech-icon tech-icon-chevron-down"></i>
@@ -335,14 +328,14 @@
                       </div>
                   </div>
                   <div class="col-footer col-address">
-                      <h4 class="title-footer">Address</h4>
+                      <h4 class="title-footer">{{$t('address')}}</h4>
                       <div class="box-content-footer">
                           <div class="mr-3">
                               <i class="tech-icon tech-icon-location"></i>
                           </div>
                           <div>
-                              <p class="mb-2">Valletta Buildings, South Street, Valletta - VLT 1103 Malta, US</p>
-                              <p>20 Phan Dang Luu street, Hai Chau District, Danang city, Vietnam</p>
+                              <p class="mb-2">{{$t('us_address')}}</p>
+                              <p>{{$t('vn_address')}}</p>
                           </div>
                       </div>
                       <div class="box-content-footer">
@@ -350,16 +343,16 @@
                               <i class="tech-icon tech-icon-mobile"></i>
                           </div>
                           <div>
-                              <p>(+1) 555-0108-000 or (+236) 555-0108</p>
+                              <p>(+1) 555-0108-000 {{$t('or')}} (+236) 555-0108</p>
                           </div>
                       </div>
                   </div>
                   <div class="col-footer col-subcribe">
-                      <h4 class="title-footer">Subscribe</h4>
+                      <h4 class="title-footer">{{$t('subscribe')}}</h4>
                       <div class="subscribe-content">
-                          <p>Subscribe to our newsletter and be the first to know about our updates</p>
+                          <p>{{$t('subscribe_content')}}</p>
                           <div class="input-search input-footer">
-                              <input placeholder="Enter your email" type="text">
+                              <input :placeholder="$t('enter_email')" type="text">
                               <i class="tech-icon tech-icon-arrow-right"></i>
                           </div>
                       </div>

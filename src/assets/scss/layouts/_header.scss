@@ -27,7 +27,7 @@
   @include rem(width, 30);
 }
 
-#img-vietnam {
+.img-vietnam {
   display: none;
 }
 
@@ -130,9 +130,9 @@
   }
 }
 
-.flag-img-moble {
+.flag-img-mobile {
   @include rem(width, 20);
-  display: inline-block;
+  //display: inline-block;
   @include rem(margin-right, 5);
 }
 

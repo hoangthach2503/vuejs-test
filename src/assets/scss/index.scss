@@ -134,7 +134,7 @@
       left: 50%;
       transform: translateX(-50%);
       @include rem(top, 75);
-      animation: rotationMotion 3s ease-in-out infinite;
+      animation: rotationMotion 2s ease-in-out infinite;
     }
   }
 }

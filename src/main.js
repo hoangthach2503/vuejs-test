@@ -2,12 +2,28 @@ import Vue from 'vue'
 import App from './App.vue'
 import 'slick-carousel'
 import $ from 'jquery'
+import VueI18n from 'vue-i18n'
+import vnMessage from './lang/vn.json'
+import enMessage from './lang/en.json'
 
 Vue.config.productionTip = false
+Vue.use(VueI18n)
+
+const messages = {
+  vn: vnMessage,
+  en: enMessage,
+}
+const i18n = new VueI18n({
+  locale: 'en', // set locale
+  messages,
+  fallbackLocale: 'en',
+})
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  el: '#app',
+  i18n,
+  render: h => h(App)
+})
 
 function displayLanguage() {
   // show language
@@ -28,14 +44,16 @@ function displayLanguage() {
 
   // change language
   $("#flag-vietnam").on('click', function () {
-    $('#img-english').hide();
-    $('#img-vietnam').show();
+    $('.img-english').hide();
+    $('.img-vietnam').show();
+    i18n.locale = 'vn';
     $('#box-language > li').removeClass('active');
     $(this).addClass('active');
   })
   $("#flag-english").on('click', function () {
-    $('#img-vietnam').hide();
-    $('#img-english').show();
+    $('.img-vietnam').hide();
+    $('.img-english').show();
+    i18n.locale = 'en';
     $('#box-language > li').removeClass('active');
     $(this).addClass('active');
   })
@@ -47,14 +65,16 @@ function displayLanguage() {
 
   // change language mobile
   $("#flag-vietnam-mobile").on('click', function () {
-    $('#img-english').hide();
-    $('#img-vietnam').show();
+    $('.img-english').hide();
+    $('.img-vietnam').show();
+    i18n.locale = 'vn';
     $('#box-language-mobile > li').removeClass('active');
     $(this).addClass('active');
   })
   $("#flag-english-mobile").on('click', function () {
-    $('#img-vietnam').hide();
-    $('#img-english').show();
+    $('.img-vietnam').hide();
+    $('.img-english').show();
+    i18n.locale = 'en';
     $('#box-language-mobile > li').removeClass('active');
     $(this).addClass('active');
   })
