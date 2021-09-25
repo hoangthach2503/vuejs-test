@@ -1,0 +1,204 @@
+//import font
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic-ext,latin-ext");
+
+// reset
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none !important;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $body;
+  font-family: "Montserrat", "Playfair Display", sans-serif;
+  font-style: normal;
+  font-weight: $regular;
+  color: $color-neutral-500;
+  @include rem(font-size, 14);
+  cursor: default;
+  @include rem(font-size, 14);
+
+  a {
+    font-weight: $regular;
+    &:hover {
+      font-weight: $regular;
+    }
+  }
+}
+
+q {
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+.btn {
+  @include rem(margin, 0);
+  outline: none !important;
+  @include transition(all 0.3s ease);
+  box-shadow: none;
+  @include rem(padding, 0, 12);
+  &:hover {
+    @include transition(all 0.3s ease);
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+* {
+  &,
+  &:before,
+  &:after {
+    @include box-sizing(border-box);
+  }
+}
+
+a {
+  text-decoration: none;
+  @include transition(all 0.3s ease);
+  font-weight: $regular;
+  outline: none;
+  &:hover {
+    text-decoration: none;
+    font-weight: $regular;
+  }
+}
+
+select:-moz-focusring {
+  color: transparent;
+  outline: 0;
+  text-shadow: 0 0 0 #000;
+}
+
+select:-moz-focus-inner {
+  border: 0;
+  outline: 0;
+}
+input,
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+input[type=file], /* FF, IE7+, chrome (except button) */
+input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+    cursor: pointer; 
+}
+
+ul {
+  list-style: none;
+}

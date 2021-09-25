@@ -1,0 +1,96 @@
+.tech-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  mask-position: 50%;
+  -webkit-mask-position: 50%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  width: 1.3em;
+  line-height: 1.5em;
+}
+.tech-icon:before {
+  content: "\00a0";
+}
+
+.tech-icon-triangle {
+  mask-image: url("~@/assets/img/icon/triangle.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/triangle.svg");
+  background-color: #ffffff;
+}
+
+.tech-icon-check {
+  mask-image: url("~@/assets/img/icon/check.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/check.svg");
+  background-color: #000;
+}
+
+.tech-icon-arrow-right {
+  mask-image: url("~@/assets/img/icon/arrow-right.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/arrow-right.svg");
+  background-color: #000;
+}
+
+.tech-icon-chevron-down {
+  mask-image: url("~@/assets/img/icon/chevron-down.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/chevron-down.svg");
+  background-color: #000;
+}
+
+.tech-icon-calendar-tick {
+  mask-image: url("~@/assets/img/icon/calendar-tick.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/calendar-tick.svg");
+  background-color: #000;
+}
+
+.tech-icon-pen-tool-2 {
+  mask-image: url("~@/assets/img/icon/pen-tool-2.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/pen-tool-2.svg");
+  background-color: #000;
+}
+
+.tech-icon-people {
+  mask-image: url("~@/assets/img/icon/people.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/people.svg");
+  background-color: #000;
+}
+.tech-icon-facebook {
+  mask-image: url("~@/assets/img/icon/facebook.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/facebook.svg");
+  background-color: #fff;
+}
+.tech-icon-linkedin {
+  mask-image: url("~@/assets/img/icon/linkedin.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/linkedin.svg");
+  background-color: #fff;
+}
+.tech-icon-twitter {
+  mask-image: url("~@/assets/img/icon/twitter.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/twitter.svg");
+  background-color: #fff;
+}
+.tech-icon-location {
+  mask-image: url("~@/assets/img/icon/location.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/location.svg");
+  background-color: #fff;
+}
+.tech-icon-mobile {
+  mask-image: url("~@/assets/img/icon/mobile.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/mobile.svg");
+  background-color: #fff;
+}
+.tech-icon-menu {
+  mask-image: url("~@/assets/img/icon/menu.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/menu.svg");
+  background-color: #fff;
+}
+.tech-icon-close {
+  mask-image: url("~@/assets/img/icon/close.svg");
+  -webkit-mask-image: url("~@/assets/img/icon/close.svg");
+  background-color: #000;
+}

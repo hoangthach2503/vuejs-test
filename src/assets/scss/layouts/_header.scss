@@ -1,0 +1,169 @@
+.header {
+  @include rem(padding, 15);
+  @include vertical-align-flex();
+  @include justify-content(space-between);
+}
+
+.menu-header {
+  a {
+    display: inline-block;
+    color: $color-white;
+    font-weight: bold;
+    @include rem(margin, 5, 26);
+    &:hover {
+      font-weight: bold;
+    }
+    &:first-child {
+      @include rem(margin-left, 0);
+    }
+    &:last-child {
+      @include rem(margin-right, 0);
+    }
+  }
+}
+
+.flag-img {
+  display: inline-block;
+  @include rem(width, 30);
+}
+
+#img-vietnam {
+  display: none;
+}
+
+.change-language {
+  position: relative;
+  > i {
+    @include rem(font-size, 10);
+    @include rem(margin-left, 5);
+  }
+}
+
+.box-language {
+  display: none;
+  position: absolute;
+  @include rem(top, 35);
+  @include rem(right, 0);
+  background-color: $color-white;
+  list-style: none;
+  @include borderRadius(8px);
+  color: $color-black;
+  &.box-language-mobile {
+    right: initial;
+    left: 0;
+    border: 1px solid $border;
+  }
+  > li {
+    cursor: pointer;
+    @include rem(padding, 5, 10);
+    position: relative;
+    @include vertical-align-flex();
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+    &:not(:last-child):before {
+      content: "";
+      position: absolute;
+      @include rem(bottom, 0);
+      left: 50%;
+      height: 1px;
+      width: 90%;
+      transform: translateX(-50%);
+      background-color: $border;
+    }
+    &.active {
+      > i {
+        opacity: 1;
+      }
+    }
+    > i {
+      opacity: 0;
+      @include rem(font-size, 14);
+    }
+    > img {
+      @include rem(margin, 0, 10);
+    }
+    > span {
+      @include rem(font-size, 10);
+    }
+  }
+}
+.icon-menu {
+  cursor: pointer;
+  i {
+    @include rem(font-size, 24);
+  }
+}
+
+.menu-mobile {
+  display: none;
+  position: fixed;
+  @include rem(right, 0);
+  @include rem(top, 0);
+  @include rem(padding, 15);
+  @include rem(max-width, 375);
+  width: 100%;
+  height: 100%;
+  background: $color-white;
+  z-index: 99;
+  .menu-mobile-header {
+    @include vertical-align-flex();
+    @include justify-content(space-between);
+    .close-icon {
+      cursor: pointer;
+      display: inline-block;
+    }
+  }
+}
+
+.box-select {
+  @include rem(padding, 4, 7);
+  @include borderRadius(8px);
+  border: 1px solid #afafaf;
+  background: $color-neutral-50;
+  display: inline-block;
+  cursor: pointer;
+  > i {
+    background-color: $color-black;
+    @include rem(font-size, 8);
+  }
+}
+
+.flag-img-moble {
+  @include rem(width, 20);
+  display: inline-block;
+  @include rem(margin-right, 5);
+}
+
+.box-menu {
+  list-style: none;
+  @include rem(margin-top, 30);
+  .item-menu {
+    @include rem(padding, 15, 15);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    color: $color-black;
+    a{
+      color: $color-black;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      cursor: pointer;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-neutral-100;
+    }
+    &:hover {
+      background: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-tech {
+    @include rem(width, 80);
+  }
+}

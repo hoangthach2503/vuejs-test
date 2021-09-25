@@ -1,0 +1,46 @@
+.box-timer {
+  color: $color-black;
+  background: $color-white;
+  @include flexbox();
+  @include justify-content(space-between);
+  @include rem(padding, 10, 30);
+  @include borderRadius(21px);
+  .timer-division {
+    @include rem(font-size, 54);
+  }
+  .timer-item {
+    text-align: center;
+    .timer-number {
+      @include rem(font-size, 60);
+      @include rem(line-height, 64);
+      display: inline-block;
+      font-weight: 900;
+      vertical-align: middle;
+      font-family: "Playfair Display", sans-serif;
+      @include rem(width, 60);
+      text-align: center;
+    }
+    .timer-text {
+      display: block;
+      font-weight: 700;
+      @include rem(padding-top, 10);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box-timer {
+    .timer-division {
+      @include rem(font-size, 40);
+    }
+    .timer-item {
+      .timer-number {
+        @include rem(font-size, 36);
+        @include rem(line-height, 45);
+      }
+      .timer-text {
+        @include rem(font-size, 12);
+      }
+    }
+  }
+}

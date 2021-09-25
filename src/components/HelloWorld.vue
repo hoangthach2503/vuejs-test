@@ -1,32 +1,373 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+      <div id="scroll-change" class="scroll-change">
+          <i class="tech-icon tech-icon-chevron-down"></i>
+      </div>
+      <div id="menu-mobile" class="menu-mobile">
+          <div class="menu-mobile-header">
+              <div class="position-relative">
+                  <div id="select-language" class="box-select">
+                      <img id="img-vietnam" class="flag-img-moble" src="../assets/img/vietnam.png" alt="">
+                      <img id="img-english" class="flag-img-moble" src="../assets/img/united-states.png" alt="">
+                      <i class="tech-icon tech-icon-triangle"></i>
+                  </div>
+                  <ul id="box-language-mobile" class="box-language box-language-mobile">
+                      <li id="flag-vietnam-mobile">
+                          <i class="tech-icon tech-icon-check"></i>
+                          <img class="flag-img" src="../assets/img/vietnam.png" alt="">
+                          <span>Vietnamese</span>
+                      </li>
+                      <li id="flag-english-mobile" class="active">
+                          <i class="tech-icon tech-icon-check"></i>
+                          <img class="flag-img" src="../assets/img/united-states.png" alt="">
+                          <span>English</span>
+                      </li>
+                  </ul>
+              </div>
+              <div id="close-menu" class="close-icon">
+                  <i class="tech-icon tech-icon-close"></i>
+              </div>
+          </div>
+          <ul class="box-menu">
+              <li class="item-menu js-about-us-menu"><a href="#about-us" class="js-about-us-menu">ABOUT US</a></li>
+              <li class="item-menu"><a href="#games">GAMES</a></li>
+              <li class="item-menu"><a href="#partners">PARTNERS</a></li>
+              <li class="item-menu"><a href="#contact-us">CONTACT US</a></li>
+          </ul>
+      </div>
+
+      <section id="wrapper-test" class="wrapper-test">
+          <section class="wrapper-header">
+              <header class="header">
+                  <img class="logo-tech" src="../assets/img/white_logo.png" alt="z-tech">
+                  <nav class="menu-header show-web">
+                      <a href="#about-us" class="js-about-us-menu">ABOUT US</a>
+                      <a href="#games">GAMES</a>
+                      <a href="#partners">PARTNERS</a>
+                      <a href="#contact-us">CONTACT US</a>
+                      <a id="flag-language" href="javascript:;" class="change-language">
+                          <img id="img-vietnam" class="flag-img" src="../assets/img/vietnam.png" alt="">
+                          <img id="img-english" class="flag-img" src="../assets/img/united-states.png" alt="">
+                          <i class="tech-icon tech-icon-triangle"></i>
+                          <ul id="box-language" class="box-language">
+                              <li id="flag-vietnam">
+                                  <i class="tech-icon tech-icon-check"></i>
+                                  <img class="flag-img" src="../assets/img/vietnam.png" alt="">
+                                  <span>Vietnamese</span>
+                              </li>
+                              <li id="flag-english" class="active">
+                                  <i class="tech-icon tech-icon-check"></i>
+                                  <img class="flag-img" src="../assets/img/united-states.png" alt="">
+                                  <span>English</span>
+                              </li>
+                          </ul>
+                      </a>
+                  </nav>
+                  <div id="show-menu-mobile" class="icon-menu show-mobile">
+                      <i class="tech-icon tech-icon-menu"></i>
+                  </div>
+              </header>
+              <div class="header-content">
+                  <div class="box-ready">
+                      <h1 class="title">We’re Getting Ready</h1>
+                      <div class="box-timer" id="timer">
+                          <div class="timer-item" id="days">
+                              <span class='timer-number js-days-number'></span><span class="timer-text">Days</span>
+                          </div>
+                          <span class="timer-division">:</span>
+                          <div class="timer-item" id="hours">
+                              <span class='timer-number js-hours-number'></span><span class="timer-text">Hours</span>
+                          </div>
+                          <span class="timer-division">:</span>
+                          <div class="timer-item" id="minutes">
+                              <span class='timer-number js-minutes-number'></span><span class="timer-text">Minutes</span>
+                          </div>
+                          <span class="timer-division">:</span>
+                          <div class="timer-item" id="seconds">
+                              <span class='timer-number js-seconds-number'></span><span class="timer-text">Seconds</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="box-description">
+                      <p class="mb-3">We will back to something amazing. Getting the latest updates about our games.Please sign up to
+                          our newsletter.</p>
+                      <div class="input-search">
+                          <input placeholder="Enter your email" type="text">
+                          <i class="tech-icon tech-icon-arrow-right"></i>
+                      </div>
+                  </div>
+              </div>
+              <img class="img-fairy" src="../assets/img/fairy.png" alt="">
+          </section>
+          <section class="wrapper-about">
+              <div class="row">
+                  <div class="col-md-6">
+                      <h2 class="title-about title-common" id="about-us">About Us</h2>
+                      <p class="description-about">
+                          Browse our selection of free online games and have a great time without leaving the site! Our Kids Games
+                          option also includes game reviews, extensive game cheats and walkthroughs, and much more. We have exclusive
+                          free downloads, videos, and articles as well. Etech reviews the most popular kids games from all the most
+                          popular video gaming platforms, so you don’t need to search around for fun anywhere else on the Internet.
+                          Explore a whole new world of gaming on Etech.
+                      </p>
+                      <div class="mobile-flex">
+                          <div>
+                              <h3 class="title-user">600<span>M</span>+</h3>
+                              <h5 class="color-black font-weight-bold mb-4">Users</h5>
+                          </div>
+                          <div>
+                              <h3 class="title-user">135+</h3>
+                              <h5 class="color-black font-weight-bold">Games</h5>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="box-about">
+                          <div class="item-about">
+            <span class="circle-icon">
+              <i class="tech-icon tech-icon-calendar-tick"></i>
+            </span>
+                              <div class="item-about--content">
+                                  <h5>24 - Hour</h5>
+                                  <p>24/7 access ensures operators' businesses runs smoothly all year long.</p>
+                              </div>
+                          </div>
+                          <div class="item-about">
+            <span class="circle-icon">
+              <i class="tech-icon tech-icon-pen-tool-2"></i>
+            </span>
+                              <div class="item-about--content">
+                                  <h5>Design</h5>
+                                  <p>Combining imaginative universes, play dynamics, and unprecedented gameplay, our games transcend the
+                                      boundaries of the virtual world by weaving innovative gameplay.</p>
+                              </div>
+                          </div>
+
+                          <div class="item-about">
+            <span class="circle-icon">
+              <i class="tech-icon tech-icon-people"></i>
+            </span>
+                              <div class="item-about--content">
+                                  <h5>Team</h5>
+                                  <p>Etech is an award-winning, international studio of designers, artists, animators and producers that
+                                      create content for the biggest names in film and video games. </p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="box-about-image">
+                  <img class="img-witch img-responsive" src="../assets/img/witch.png" alt="">
+                  <img class="img-map img-responsive" src="../assets/img/Pin-map.png" alt="">
+              </div>
+          </section>
+          <section class="wrapper-our-games">
+              <div class="our-games-header text-center">
+                  <h2 class="title-common" id="games">Our Games</h2>
+                  <p class="our-games--description">As a pioneer of mobile app gamification, we take pride in originality and
+                      individuality, providing global players with state-of-the-art games that feature splendid storylines,
+                      sensational sound effects and magnificent animation that never cease to impress.</p>
+              </div>
+              <div class="box-images">
+                  <div class="column-image column-old">
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-1.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">E-Space</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-5.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">Pirates</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-9.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">Magic tree</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="column-image column-event mobile-column-about">
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-2.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">Kingland</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-6.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">Witch Party</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-10.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">Aborigines</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="column-image column-old mobile-column-about-inside">
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-3.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">The Last <br> Game</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-7.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">Rocky</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-11.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">Cinderella</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="column-image column-event">
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-4.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">G-Dragon</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-8.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">Blue Fire</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+
+                      <div class="image-item">
+                          <img class="img-responsive" src="../assets/img/item-12.png" alt="">
+                          <div class="image-item--content">
+                              <h3 class="title">Egypt Game</h3>
+                              <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+          </section>
+
+          <section class="wrapper-our-partners">
+              <h2 class="title-common text-center mb-5" id="partners">Our Partners</h2>
+              <div class="carousel">
+                  <div class="arrow-slick slick-left">
+                      <i class="tech-icon tech-icon-chevron-down"></i>
+                  </div>
+                  <div class="arrow-slick slick-right">
+                      <i class="tech-icon tech-icon-chevron-down"></i>
+                  </div>
+                  <div id="slick-games" class="slick-carousel">
+                      <div>
+                          <img class="img-responsive" src="../assets/img/game-1.png" alt="">
+                      </div>
+                      <div>
+                          <img class="img-responsive" src="../assets/img/game-2.png" alt="">
+                      </div>
+                      <div>
+                          <img class="img-responsive" src="../assets/img/game-3.png" alt="">
+                      </div>
+                      <div>
+                          <img class="img-responsive" src="../assets/img/game-4.png" alt="">
+                      </div>
+                      <div>
+                          <img class="img-responsive" src="../assets/img/game-5.png" alt="">
+                      </div>
+                      <div>
+                          <img class="img-responsive" src="../assets/img/game-6.png" alt="">
+                      </div>
+                      <div>
+                          <img class="img-responsive" src="../assets/img/game-7.png" alt="">
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+          <section class="container-footer" id="contact-us">
+              <div class="row-footer">
+                  <div class="col-footer col-logo">
+                      <img class="d-block" src="../assets/img/white_logo.png" alt="">
+                      <div class="icon-social">
+                          <i class="tech-icon tech-icon-twitter"></i>
+                          <i class="tech-icon tech-icon-facebook"></i>
+                          <i class="tech-icon tech-icon-linkedin"></i>
+                      </div>
+                  </div>
+                  <div class="col-footer col-address">
+                      <h4 class="title-footer">Address</h4>
+                      <div class="box-content-footer">
+                          <div class="mr-3">
+                              <i class="tech-icon tech-icon-location"></i>
+                          </div>
+                          <div>
+                              <p class="mb-2">Valletta Buildings, South Street, Valletta - VLT 1103 Malta, US</p>
+                              <p>20 Phan Dang Luu street, Hai Chau District, Danang city, Vietnam</p>
+                          </div>
+                      </div>
+                      <div class="box-content-footer">
+                          <div class="mr-3">
+                              <i class="tech-icon tech-icon-mobile"></i>
+                          </div>
+                          <div>
+                              <p>(+1) 555-0108-000 or (+236) 555-0108</p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-footer col-subcribe">
+                      <h4 class="title-footer">Subscribe</h4>
+                      <div class="subscribe-content">
+                          <p>Subscribe to our newsletter and be the first to know about our updates</p>
+                          <div class="input-search input-footer">
+                              <input placeholder="Enter your email" type="text">
+                              <i class="tech-icon tech-icon-arrow-right"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <footer class="footer">2017 Copyright. Policy.</footer>
+      </section>
   </div>
 </template>
 
@@ -40,19 +381,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style scoped lang="scss">
+    @import "../assets/scss/index.scss";
 </style>

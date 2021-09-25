@@ -1,0 +1,14 @@
+@keyframes rotationMotion {
+  0% {
+    transform: translateX(-70%) rotateY(0);
+    transform-origin: 50% 5% 0;
+  }
+  50% {
+    transform: translate(-50%, 10%) rotateY(15deg);
+    transform-origin: 50% 5% 0;
+  }
+  100% {
+    transform: translateX(-70%) rotateY(0deg);
+    transform-origin: 50% 5% 0;
+  }
+}

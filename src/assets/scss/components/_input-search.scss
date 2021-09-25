@@ -1,0 +1,21 @@
+.input-search {
+  background: $color-white;
+  @include borderRadius(8px);
+  position: relative;
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    @include rem(padding, 10, 35, 10, 10);
+    @include borderRadius(8px);
+    @include rem(font-size, 14);
+    &::placeholder {
+      color: $color-neutral-600;
+      @include rem(font-size, 12);
+    }
+  }
+  i {
+    @include vertical-align-absolute();
+    @include rem(right, 10);
+  }
+}

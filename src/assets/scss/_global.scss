@@ -1,0 +1,54 @@
+@charset "UTF-8";
+// /////////////////////
+// base
+// ////////////////////
+@import "base/bootstrap-variables";
+@import "base/mixin";
+@import "base/variables";
+@import "base/resets";
+@import "base/fonts";
+@import "base/extends";
+
+// components
+@import "components/keyframe";
+@import "components/button";
+@import "components/timer";
+@import "components/input-search";
+
+// layouts
+@import "layouts/header";
+@import "layouts/footer";
+
+.img-responsive {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.title-common {
+  @include rem(font-size, 40);
+  font-weight: 900;
+  @include rem(letter-spacing, 3.6);
+  color: $color-black;
+  font-family: "Playfair Display", sans-serif;
+  @include rem(margin-bottom, 15);
+}
+
+.show-web {
+  display: block;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .show-web {
+    display: none;
+  }
+
+  .show-mobile {
+    display: inline-block;
+  }
+
+}

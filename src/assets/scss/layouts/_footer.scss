@@ -1,0 +1,112 @@
+.container-footer {
+  background: url("~@/assets/img/bg-footer.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+  @include rem(padding, 60, 15);
+  .row-footer {
+    @include flexbox();
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+    @include rem(max-width, 1190);
+    @include rem(margin, 0, auto);
+    .col-footer {
+      @include rem(padding, 0, 15);
+      &.col-logo {
+        @include flex-basis(40%);
+        width: 40%;
+      }
+      &.col-address,
+      &.col-subcribe {
+        @include flex-basis(30%);
+        width: 30%;
+      }
+    }
+  }
+
+  .icon-social {
+    @include rem(margin-top, 15);
+    i {
+      cursor: pointer;
+      &:not(:last-child) {
+        @include rem(margin-right, 12);
+      }
+    }
+  }
+
+  .title-footer {
+    @include rem(font-size, 24);
+    font-weight: bold;
+    @include rem(margin-bottom, 25);
+  }
+
+  .box-content-footer {
+    @include flexbox();
+    @include rem(margin-bottom, 25);
+  }
+
+  .subscribe-content {
+    .input-footer {
+      @include rem(margin-top, 7);
+      background: transparent;
+      border: 1px solid $color-white;
+      input {
+        background: transparent;
+        &::placeholder {
+          color: $color-white;
+        }
+      }
+      i {
+        background: $color-white;
+      }
+    }
+  }
+}
+
+.footer {
+  background: $color-black;
+  color: $color-white;
+  text-align: center;
+  @include rem(padding, 15);
+}
+@media screen and (max-width: 768px) {
+  .container-footer {
+    @include rem(padding, 30, 15);
+    .row-footer {
+      .col-footer {
+        @include rem(padding, 0, 15);
+        &.col-logo {
+          @include flex-basis(100%);
+          width: 100%;
+          text-align: center;
+          img {
+            margin: 0 auto;
+          }
+        }
+        &.col-address,
+        &.col-subcribe {
+          @include flex-basis(100%);
+          width: 100%;
+          @include rem(margin-top, 30);
+        }
+      }
+    }
+  
+    .icon-social {
+    }
+  
+    .title-footer {
+     
+    }
+  
+    .box-content-footer {
+     
+    }
+  
+    .subscribe-content {
+      .input-footer {
+      }
+    }
+  }
+}
